@@ -23,7 +23,7 @@ class IdbCompanion < Formula
 
   def install
     File.open("Gemfile", 'w') { |file| file.write("gem 'cocoapods'") }
-    system "bundle", "exec"， "pod", "install"
+    system "bundle", "exec", "pod", "install"
     system "./idb_build.sh", "idb_companion", "build", prefix
   end
 
